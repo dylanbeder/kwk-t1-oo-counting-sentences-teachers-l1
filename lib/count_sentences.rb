@@ -25,9 +25,13 @@ if self.end_with?("?") ==true
 
   def count_sentences
   str=self.split
+  count=0
   str.each do |item|
     if item==question? || item==exclamation? || item==sentence?
-    count=str.length
-  return count
+      count=count+1
+    end
   end
+  return count
+end
+
 end
